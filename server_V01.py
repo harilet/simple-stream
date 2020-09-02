@@ -2,8 +2,8 @@ from flask import Flask, render_template, redirect, url_for
 from os import listdir, getcwd, system, chdir
 from os.path import isfile
 
-folder = "E:/stream/static/Movie"
-lis = ["Movie"]
+folder = getcwd()+"/static"
+lis = []
 chdir(folder)
 app = Flask(__name__)
 
@@ -27,7 +27,7 @@ def index():
 def downloadFile(file):
     if isfile(file):
 
-        if file[-4:] == ".mp4" or file[-4:] == ".mkv":
+        if file[-4:] == ".mp4":
             tes = ""
             for i in lis:
                 tes = tes + i + "/"

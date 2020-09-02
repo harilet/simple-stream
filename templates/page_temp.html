@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <link rel="shortcut icon" href="https://developer.cdn.mozilla.net/static/img/favicon32.e02854fdcf73.png">
+    <title>Files</title>
+    <link rel="icon" href="data:,">
+
+    <style>
+        body{
+            background-color:#90A4AE;
+        }
+        td{
+            border-style:solid;
+            border-color:#546E7A;
+            padding:20px;
+            background-color:#B0BEC5;
+        }
+    </style>
+
+</head>
+<body>
+    <a href="http://{{ip}}:{{port}}/backtrack"><--back</a>
+    <br>
+    <br>
+    <table style="width:97vw;">
+        {%for i in items %}
+            <tr>
+            {%for j in i %}
+                <td><a href="http://{{ip}}:{{port}}/browse/{{j}}"> {{ j }} </a></td>
+
+            {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>

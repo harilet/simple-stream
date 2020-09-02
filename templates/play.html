@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="https://developer.cdn.mozilla.net/static/img/favicon32.e02854fdcf73.png">
+    <title>Title</title>
+</head>
+<body>
+    <video controls style="width:97vw;height:95vh">
+    <source src="{{ url_for('static', filename=items) }}" type="video/mp4">
+    <source src="{{ url_for('static', filename=items) }}" type="video/x-matroska">
+    <source src="{{ url_for('static', filename=items) }}" type="video/AVI">
+    Your browser does not support the video tag.
+  </video>
+
+</body>
+</html>
